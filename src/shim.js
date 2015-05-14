@@ -1,17 +1,17 @@
 export let requestAnimationFrame = 'function' === typeof global.requestAnimationFrame ?
-        (...args) => global.requestAnimationFrame(...args) :
+        (cb) => global.requestAnimationFrame(cb) :
     'function' === typeof global.webkitRequestAnimationFrame ?
-        (...args) => global.webkitRequestAnimationFrame(...args) :
+        (cb) => global.webkitRequestAnimationFrame(cb) :
     'function' === typeof global.mozRequestAnimationFrame ?
-        (...args) => global.mozRequestAnimationFrame(...args) :
+        (cb) => global.mozRequestAnimationFrame(cb) :
     undefined;
 
 export let cancelAnimationFrame = 'function' === typeof global.cancelAnimationFrame ?
-        (...args) => global.cancelAnimationFrame(...args) :
+        (cb) => global.cancelAnimationFrame(cb) :
     'function' === typeof global.webkitCancelAnimationFrame ?
-        (...args) => global.webkitCancelAnimationFrame(...args) :
+        (cb) => global.webkitCancelAnimationFrame(cb) :
     'function' === typeof global.webkitCancelRequestAnimationFrame ?
-        (...args) => global.webkitCancelRequestAnimationFrame(...args) :
+        (cb) => global.webkitCancelRequestAnimationFrame(cb) :
     'function' === typeof global.mozCancelAnimationFrame ?
-        (...args) => global.mozCancelAnimationFrame(...args) :
+        (cb) => global.mozCancelAnimationFrame(cb) :
     undefined;
